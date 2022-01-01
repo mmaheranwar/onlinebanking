@@ -8,12 +8,12 @@ export class AppointmentService {
   constructor (private http:Http){}
 
   getAppointmentList() {
-    let url = "http://localhost:8080/api/appointment/all";
+    let url = "http://onlinebanking:8080/api/appointment/all";
     return this.http.get(url, { withCredentials: true });
   }
 
   confirmAppointment(id: number) {
-    let url = "http://localhost:8080/api/appointment/"+id+"/confirm";
+    let url = "http://onlinebanking:8080/api/appointment/"+id+"/confirm";
     return this.http.get(url, { withCredentials: true });
   }
 
